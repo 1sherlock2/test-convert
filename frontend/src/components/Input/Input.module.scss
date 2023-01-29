@@ -1,0 +1,86 @@
+@import '~styles/variables.scss';
+
+.container {
+  width: 100%;
+  display: block;
+
+  &_wrapper {
+    height: 100%;
+
+    &_input {
+      padding: 10px;
+      border-radius: $size-4;
+      box-sizing: border-box;
+      border: 1px solid $gray-400;
+      outline: none;
+      min-height: 100%;
+      display: inline-block;
+      position: relative;
+      font: inherit;
+      line-height: inherit;
+      background: none;
+      border: none;
+      &:hover:not(.disabled) {
+        background-color: $gray-100;
+        cursor: text;
+      }
+
+      &:focus {
+        border: 2px solid $blue-300;
+      }
+    }
+  }
+
+  .error {
+    position: absolute;
+    left: 0;
+    color: $pink-500;
+  }
+}
+
+.icon {
+  position: absolute;
+  top: $size-16;
+  right: $size-4;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  margin-left: 8px;
+  border-radius: 50%;
+  background-color: transparent;
+  transition: background-color 0.2s ease-in-out;
+  cursor: pointer;
+  opacity: 0.5;
+
+  &:active {
+    opacity: 1;
+    background-color: $gray-100;
+  }
+}
+
+.disabled {
+  background-color: $gray-200;
+  cursor: not-allowed;
+}
+
+.s {
+  @include font($font-size-16, $line-height-20);
+  & > .error {
+    @include font($font-size-14, $line-height-18);
+  }
+}
+
+.m {
+  @include font($size-20, $line-height-24);
+  & > .error {
+    @include font($font-size-16, $line-height-20);
+  }
+}
+.l {
+  @include font($size-24, $line-height-28);
+  & > .error {
+    @include font($font-size-20, $line-height-22);
+  }
+}

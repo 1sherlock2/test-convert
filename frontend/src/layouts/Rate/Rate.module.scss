@@ -1,0 +1,41 @@
+@import '~styles/variables.scss';
+
+.container {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 3em;
+  justify-content: center;
+
+  @media screen and (max-width: 1020px) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &_item {
+    position: relative;
+    display: flex;
+    gap: 20px;
+    height: 80px;
+
+    &__factor {
+      display: flex;
+      align-items: center;
+      flex: 1 1 70%;
+      box-shadow: $box-shadow_1;
+      padding: 0 $size-12;
+
+      @media screen and (max-width: 1200px) and (min-width: 1020px) {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    .item_input {
+      position: relative;
+      flex: 1 1 30%;
+      box-shadow: $box-shadow_1;
+    }
+  }
+}

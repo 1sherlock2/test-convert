@@ -1,0 +1,52 @@
+@import '~styles/variables.scss';
+
+.tabs {
+  position: relative;
+  display: flex;
+  gap: 200px;
+  color: $blue-500;
+  flex-wrap: wrap;
+  .tabItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100px;
+    min-width: 180px;
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: 0px 4px 8px $gray-200;
+    border-radius: $size-6;
+    transition: all 0.5s;
+    flex: 1 1 100px;
+    img {
+      width: 50px;
+      height: 50px;
+      align-self: end;
+    }
+  }
+}
+
+.s {
+  padding: $size-10 $size-10;
+  font-size: $font-size-14;
+}
+
+.m {
+  padding: $size-20 $size-14;
+  font-size: $font-size-16;
+}
+
+.l {
+  padding: $size-30 $size-20;
+  font-size: $font-size-24;
+}
+
+.active {
+  background: $blue-500;
+  color: $gray-100;
+  box-shadow: none;
+}
+.underline {
+  border-bottom: 1px solid red;
+  border-top: 1px solid red;
+}
